@@ -1,0 +1,105 @@
+
+@media screen and (max-width: 480px) {
+  #main { background-image: url("../../assets/world_bg_medium.svg");}
+}
+
+@media screen and (max-width: 280px) {
+  #main { background-image: url("../../assets/world_bg_small.svg");}
+}
+
+#main {
+    background-image: url("../../assets/world_bg.svg");
+    background-repeat: no-repeat;
+    backdrop-filter: blur(3px);
+    width: 100%;
+    height: 75vh;
+    background-origin: content-box;
+  } 
+  
+  .country-card {
+    max-width: 400px;
+  }
+  
+  .country-header-image {
+    background-size: cover;
+  }
+  
+  #country-info {
+    width: 30%;
+    float: left;
+    margin: 1em;
+    min-height: 4em;
+    
+  }
+  
+  .country-name {
+    margin: 0.9em 0 0 1em;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    display: block;
+    clear: both;
+  }
+  
+  .country-capital {
+      margin: 1.4em 0 0 0.5em;
+      text-overflow: ellipsis;
+      display: block;
+      font-size: smaller;
+      color: darkgrey;
+  }
+  
+  .country-bookmark {
+      margin: 0 0 0 0;
+      float: right;
+      cursor: pointer;
+  }
+  
+  .country-image {
+      margin: 0.6em  0 0 0;
+    border-radius: 50%;
+    border: 0.2em solid rgba(0, 0, 0, 0.15);
+  }
+  
+  .metadata-flag {
+      margin: 1em 0 0 1.5em;
+      float: left;
+      cursor: pointer;
+  }
+  
+  .metadata-content {
+      margin: 2em 0 0 1.5em;
+      clear: both;
+      display: grid;
+      grid-template-columns: auto auto auto;
+  }
+  
+  .content-items {
+      margin: 0.5em 0 0 0;
+      display: inline-block;
+  }
+  
+  .heading {
+      font-weight: bold;
+      text-align: right;
+  }
+  
+  
+  @media only screen and (max-width: 482px) {
+    .country-image {
+      border-radius: 50%;
+    }
+  
+    .country-name {
+      font-size: smaller;
+    }
+  }
+  
+  @media only screen and (max-width: 682px) {
+    .country-image {
+      border-radius: 50%;
+    }
+    body {
+      font-size: small;
+    }
+  }
+  

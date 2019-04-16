@@ -1,0 +1,73 @@
+<div id='main'>
+
+  <!-- <mat-progress-spinner mode='indeterminate' [diameter]=20 *ngIf='isLoading'></mat-progress-spinner> -->
+
+  <div id="country-list" *ngFor="let country of countryList">
+
+    <!-- Expansion panel -->
+    <mat-expansion-panel id="country-info">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <img [src]="country.flag" [alt]="country.name" class="country-image" height="30vh" width="30vw">
+          <span class="country-name"> {{country.name}} </span> <span class="country-capital"> ●
+            {{country.capital || 'N/A'}}</span>
+
+        </mat-panel-title>
+        <mat-panel-description>
+
+        </mat-panel-description>
+
+       
+      </mat-expansion-panel-header>
+
+      <div class="country-metadata">
+        <img [src]="country.flag" [alt]="country.name" class="metadata-flag" height="80%" width="70%"
+          (click)="openGMaps(country.name)">
+        <div class="metadata-content">
+          <table>
+            <!-- <td class="area-icon">
+              <mat-icon>terrain</mat-icon>
+            </td> -->
+            <tr></tr>
+            <td></td>
+            <td class="heading">Area •</td>
+            <td>{{country.area}}</td>
+            
+            <tr></tr>
+            <td></td>
+            <td class="heading">population •</td>
+            <td>{{country.population}}</td>
+
+            <tr></tr>
+            <td></td>
+            <td class="heading">Native name •</td>
+            <td>{{country.nativeName}}</td>
+
+            <tr></tr>
+            <td></td>
+            <td class="heading">Region •</td>
+            <td>{{country.region}}</td>
+
+            <tr></tr>
+            <td></td>
+            <td class="heading">Calling Codes •</td>
+            <td>{{country.callingCodes}}</td>
+
+          </table>
+
+          <p *ngFor="let currency of currencies">
+              <span *ngFor="let CR of currency">{{CR}} - {{CR.name}} - {{CR.symbol}} </span>
+          </p>
+
+        </div>
+
+      </div>
+      <mat-icon (click)="isBookmarked($event)" color="primary" aria-label="bookmark country icon" class="country-bookmark">{{bookmarkIcon}}</mat-icon>
+    
+    </mat-expansion-panel>
+
+  </div>
+
+
+</div>
+<!-- end of main div -->

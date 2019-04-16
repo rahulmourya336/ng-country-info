@@ -1,1 +1,25 @@
+/* Add application styles & imports to this file! */
+
 /* You can add global styles to this file, and also import other style files */
+
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:400,700|Material+Icons');
+
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"; 
+
+* {
+  font-family: "Roboto Mono", monospace, Arial, Helvetica, sans-serif;
+  font-display: swap;
+}
+
+.danger-text {
+  color: red;
+}
+
+.center {
+  text-align: center;
+}
+
+.float-right {
+  display: inline-block;
+  float: right;
+}
