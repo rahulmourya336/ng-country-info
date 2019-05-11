@@ -1,7 +1,15 @@
 <mat-toolbar>
   <mat-toolbar-row>
-    <span>Search for {{ countryName || 'country' }}</span>
+    <span class="header">Search for {{ countryName || 'country' }}</span>
+
+    <!-- View Roadmap -->
+    <div class="row">
+      <button mat-raised-button (click)="openDialog()">Roadmap</button>
+    </div>
+
+
   </mat-toolbar-row>
+
   <!-- <mat-toolbar-row>
     <div class='social-signin'>
       <div class="g-signin2" data-onsuccess="onSignIn" *ngIf="!validUser"></div>

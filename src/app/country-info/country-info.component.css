@@ -9,7 +9,8 @@
 
 #main {
     background-image: url("../../assets/world_bg.svg");
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
     backdrop-filter: blur(3px);
     width: 100%;
     height: 75vh;
@@ -25,7 +26,7 @@
   }
   
   #country-info {
-    width: 30%;
+    width: 40%;
     float: left;
     margin: 1em;
     min-height: 4em;
@@ -100,6 +101,11 @@
     }
     body {
       font-size: small;
+    }
+    
+    #country-info {
+        display: block !important;
+        width: 95%;
     }
   }
   

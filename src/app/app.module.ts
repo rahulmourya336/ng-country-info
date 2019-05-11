@@ -23,11 +23,13 @@ import {
   MatExpansionModule,
   MatGridListModule,
   MatSnackBarModule,
-  MatTableModule
+  MatTableModule,
+  MatDialogModule
 } from '@angular/material';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CountryInfoComponent } from './country-info/country-info.component';
+import { RoadmapOverviewComponent } from './roadmap-overview/roadmap-overview.component';
 
 // const config = new AuthServiceConfig([
 //   {
@@ -37,7 +39,7 @@ import { CountryInfoComponent } from './country-info/country-info.component';
 //   ]);
 
 @NgModule({
-  declarations: [AppComponent, CountryInfoComponent],
+  declarations: [AppComponent, CountryInfoComponent, RoadmapOverviewComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -58,7 +60,11 @@ import { CountryInfoComponent } from './country-info/country-info.component';
     MatGridListModule,
     MatSnackBarModule,
     MatTableModule,
+    MatDialogModule
     // SocialLoginModule.initialize(config)
+  ],
+  entryComponents: [
+    RoadmapOverviewComponent
   ],
   providers: [],
   bootstrap: [AppComponent],

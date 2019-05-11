@@ -17,7 +17,7 @@
 
         </mat-panel-description>
 
-       
+
       </mat-expansion-panel-header>
 
       <div class="country-metadata">
@@ -32,7 +32,7 @@
             <td></td>
             <td class="heading">Area •</td>
             <td>{{country.area}}</td>
-            
+
             <tr></tr>
             <td></td>
             <td class="heading">population •</td>
@@ -56,14 +56,14 @@
           </table>
 
           <p *ngFor="let currency of currencies">
-              <span *ngFor="let CR of currency">{{CR}} - {{CR.name}} - {{CR.symbol}} </span>
+            <span *ngFor="let CR of currency">{{CR}} - {{CR.name}} - {{CR.symbol}} </span>
           </p>
 
         </div>
 
       </div>
-      <mat-icon (click)="isBookmarked($event)" color="primary" aria-label="bookmark country icon" class="country-bookmark">{{bookmarkIcon}}</mat-icon>
-    
+      <!-- <mat-icon (click)="isBookmarked($event)" color="primary" aria-label="bookmark country icon" class="country-bookmark">{{bookmarkIcon}}</mat-icon> -->
+
     </mat-expansion-panel>
 
   </div>

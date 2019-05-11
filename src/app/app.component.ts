@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup } from '@angular/forms';
 import { CountryAPIService } from './country-api.service';
-import { MatIconRegistry, MatSnackBar } from '@angular/material';
+import { MatIconRegistry, MatSnackBar, MatDialog, MatDialogRef } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
+import { RoadmapOverviewComponent } from './roadmap-overview/roadmap-overview.component';
 
 
 @Component({
@@ -17,11 +18,18 @@ export class AppComponent {
   countryList = [];
 
   // tslint:disable-next-line:max-line-length
-  constructor(private fb: FormBuilder, private API: CountryAPIService, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, private snackBar: MatSnackBar) {
+  constructor(private fb: FormBuilder, private API: CountryAPIService, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, private snackBar: MatSnackBar, public dialog: MatDialog) {
     console.log('Init');
     this.options = fb.group({
       hideRequired: false,
       floatLabel: 'auto',
+    });
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(RoadmapOverviewComponent, {
+      width: '45em',
+      height: '25em'
     });
   }
 
